@@ -5,6 +5,7 @@ import Home from "./pages/home.js";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Throwback from "./pages/throwback.js";
 
 
 function App() {
@@ -31,7 +32,11 @@ function App() {
           element={<Home />}
     
         ></Route>
-      
+        <Route
+          path="/throwback"
+          element={<Throwback />}
+    
+        ></Route>
  
    
       </Routes>

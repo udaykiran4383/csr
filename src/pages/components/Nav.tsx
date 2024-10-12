@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll"; // Replace next/link with react-router-dom
 import ablogo from "../components/img/abhyuday2.png"; // Assuming you have the Abhyuday logo path
-import finlogo from "../components/img/finlogo.jpeg";
+import finlogo from "../components/img/finlogo-removebg-preview (1).png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
@@ -34,8 +34,8 @@ const Nav = ({ openNav }) => {
     <div
       className={`fixed w-full transition-all duration-200 z-[1000] ${
         navSticky
-          ? "bg-gradient-to-b from-[#020209] to-[#000305]"
-          : "bg-[#02040d]"
+          ? "bg-gradient-to-b from-bg-[#6366f1] to-[#000305]"
+          : "bg-[#6366f1]"
       }`}
     >
       <div className="flex items-center h-[10vh] lg:h-[12vh] justify-between w-4/5 mx-auto">
@@ -69,7 +69,7 @@ const Nav = ({ openNav }) => {
           </li>
           <li className="hover:cursor-pointer">
             <Link
-              to="testimonials"
+              to="throwback"
               smooth={true}
               offset={-80}
               duration={500}

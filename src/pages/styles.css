@@ -1,0 +1,16 @@
+/* styles.css */
+@keyframes gradientAnimation {
+  0% {
+    background: linear-gradient(90deg, rgba(79, 152, 208, 1) 0%, rgba(12, 14, 35, 1) 100%);
+  }
+  50% {
+    background: linear-gradient(90deg, rgba(12, 14, 35, 1) 0%, rgba(79, 152, 208, 1) 100%);
+  }
+  100% {
+    background: linear-gradient(90deg, rgba(79, 152, 208, 1) 0%, rgba(12, 14, 35, 1) 100%);
+  }
+}
+
+.animated-background {
+  animation: gradientAnimation 5s ease infinite;
+}

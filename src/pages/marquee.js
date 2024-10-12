@@ -6,17 +6,21 @@ export default function Marquee() {
         '/images/Organization Logo (1)_1.png',
         '/images/images.png',
         '/images/images (1).png',
+        '/images/images.jpeg',
+        '/images/Organization Logo (1)_1.png',
+        '/images/images.png',
+        '/images/images (1).png',
     ];
 
     return (
-        <div className="w-full overflow-hidden  p-4">
+        <div className="w-full overflow-hidden p-4">
             <style jsx>{`
                 @keyframes marquee {
                     0% {
                         transform: translateX(0%);
                     }
                     100% {
-                        transform: translateX(-100%);
+                        transform: translateX(-50%);
                     }
                 }
                 .animate-marquee {
@@ -33,7 +37,7 @@ export default function Marquee() {
                             alt={`Marquee image ${index + 1}`}
                             width={220}
                             height={220}
-                            className="rounded-full border-4 border-[#F26B3A]"
+                            className="rounded-full border-4 border-[#090602]"
                         />
                     </div>
                 ))}

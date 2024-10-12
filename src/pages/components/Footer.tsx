@@ -1,120 +1,91 @@
 import React from "react";
 import { FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import logo from "../components/img/abhyuday2.png";
 import { Link } from "react-router-dom";
+import logo from "../components/img/abhyuday2.png";
 
-function Footer() {
+export default function Footer() {
   return (
-    <div
-      className="h-1/2 w-full flex md:flex-row flex-col justify-around items-start pt-20 pr-20 pb-20 pl-5 lg:p-20"
-      style={{
-        background:
-          "black",
-        color: "white",
-        position: "relative",
-        overflow: "hidden",
-      }}
-    >
-      <div className="p-5 md:max-w-sm lg:max-w-md" data-aos="fade-up">
-        <ul>
-          <img
-            src={logo}
-            alt="Logo"
-            width={296}
-            height={176}
-            className="pb-4"
-          />
-          <li className="text-gray-500 text-md pb-2 font-roboto font-semibold text-pretty">
-            Abhyuday, IIT Bombay is Asia's largest student run&nbsp;
-            organization&nbsp; working&nbsp; towards&nbsp; creating a
-            sense&nbsp; of Social&nbsp; Responsibility and Leadership among the
-            youth of India.
-          </li>
-          {/* <li className="text-gray-500 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
-            Abhyuday, IIT Bombay is Asia's largest student <br /> run &nbsp; organization &nbsp; working &nbsp; towards &nbsp; creating a <br /> sense &nbsp; of Social &nbsp; Responsibility and Leadership <br /> among the youth of India.
-          </li> */}
-          <li className="font-bold font-poppins pb-4">
-            Inspiring Individuals, Transforming Communities
-          </li>
-          <div className="flex gap-6 pb-5">
-            <Link
-              to="https://www.instagram.com/iitbombay_abhyuday/"
-              target="_blank"
-            >
-              <FaInstagram className="text-2xl cursor-pointer hover:text-pink-500" />
-            </Link>
-            <Link to="https://x.com/Abhyuday_IITB" target="_blank">
-              <FaXTwitter className="text-2xl cursor-pointer hover:text-gray-600" />
-            </Link>
-            <Link
-              to="https://www.linkedin.com/company/abhyuday-iit-bombay/"
-              target="_blank"
-            >
-              <FaLinkedin className="text-2xl cursor-pointer hover:text-blue-800" />
-            </Link>
-            <Link to="https://youtube.com/@abhyudayiitbombay" target="_blank">
-              <FaYoutube className="text-2xl cursor-pointer hover:text-red-600" />
-            </Link>
+    <footer className="bg-[#020b1f] text-white py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="space-y-4">
+            <img
+              src= {logo}
+              alt="Abhyuday Logo"
+              width={296}
+              height={176}
+              className="max-w-[200px] w-full"
+            />
+            <p className="text-gray-400 text-sm font-roboto">
+              Abhyuday, IIT Bombay is Asia's largest student run organization working towards creating a sense of Social Responsibility and Leadership among the youth of India.
+            </p>
+            <p className="font-bold font-poppins">
+              Inspiring Individuals, Transforming Communities
+            </p>
+            <div className="flex space-x-4">
+              <SocialLink href="https://www.instagram.com/iitbombay_abhyuday/" icon={<FaInstagram />} hoverClass="hover:text-pink-500" />
+              <SocialLink href="https://x.com/Abhyuday_IITB" icon={<FaXTwitter />} hoverClass="hover:text-gray-600" />
+              <SocialLink href="https://www.linkedin.com/company/abhyuday-iit-bombay/" icon={<FaLinkedin />} hoverClass="hover:text-blue-800" />
+              <SocialLink href="https://youtube.com/@abhyudayiitbombay" icon={<FaYoutube />} hoverClass="hover:text-red-600" />
+            </div>
           </div>
-        </ul>
+
+          <div className="space-y-4">
+            <h3 className="text-xl font-bold font-outfit">QUICK LINKS</h3>
+            <ul className="space-y-2 font-roboto">
+              <QuickLink href="https://www.abhyudayiitb.org" text="Abhyuday" />
+              <QuickLink href="https://abhyudayiitb.org/events.html" text="Events" />
+              <QuickLink href="https://abhyudayiitb.org/campaigns.html" text="Campaigns" />
+              <QuickLink href="https://abhyudayiitb.org/competitions.html" text="Competitions" />
+            </ul>
+          </div>
+
+          <div className="space-y-4">
+            <h3 className="text-xl font-bold font-outfit">REACH OUT</h3>
+            <address className="not-italic text-gray-400 font-roboto">
+              <Link to="https://maps.app.goo.gl/seG6qxwWHYLZWjrG7" target="_blank" className="hover:text-blue-600">
+                Abhyuday Office,<br />
+                Student Activity Centre (SAC),<br />
+                IIT Bombay, Powai,<br />
+                Mumbai, India
+              </Link>
+            </address>
+          </div>
+
+          <div className="space-y-4">
+            <h3 className="text-xl font-bold font-outfit">LOCATION</h3>
+            <div className="aspect-w-16 aspect-h-9">
+              <iframe
+                title="Abhyuday Office Location"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151437.012086062!2d72.766180952378!3d19.11522437620462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c93b5d49735f%3A0x602cbe8b5292b0d6!2sIIT%20Bombay!5e0!3m2!1sen!2sin!4v1697120249381!5m2!1sen!2sin"
+                className="w-full h-full"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+        </div>
       </div>
-      <div className="p-5">{/* Your content here */}</div>
-      <div className="p-5" data-aos="fade-up">
-        <ul className="font-roboto">
-          <p className="text-gray-20 font-outfit font-bold text-2xl pb-4">
-            QUICK LINKS
-          </p>
-          <li className="text-gray-50 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
-            <Link to="https://www.abhyudayiitb.org" target="_blank">
-              Abhyuday
-            </Link>
-          </li>
-          {/* <li className="text-gray-50 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
-          <Link to="https://www.abhyudayiitb.org">CR Program</Link>
-          </li> */}
-          <li className="text-gray-50 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
-            <Link to="https://abhyudayiitb.org/events.html" target="_blank">
-              Events
-            </Link>
-          </li>
-          <li className="text-gray-50 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
-            <Link to="https://abhyudayiitb.org/campaigns.html" target="_blank">
-              Campaigns
-            </Link>
-          </li>
-          <li className="text-gray-50 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
-            <Link
-              to="https://abhyudayiitb.org/competitions.html"
-              target="_blank"
-            >
-              Competitions
-            </Link>
-          </li>
-        </ul>
-      </div>
-      <div className="p-5" data-aos="fade-up">
-        <ul>
-          <p className="text-gray-20 font-outfit font-bold text-2xl pb-4">
-            REACH OUT
-          </p>
-          <li className="text-gray-50 text-md pb-2 font-roboto font-semibold hover:text-blue-600 cursor-pointer">
-            <Link
-              to="https://maps.app.goo.gl/seG6qxwWHYLZWjrG7"
-              target="_blank"
-            >
-              Abhyuday Office, <br />
-              Student Activity <br />
-              Centre (SAC), <br />
-              IIT Bombay, <br />
-              Powai, <br />
-              Mumbai, India
-            </Link>
-          </li>
-        </ul>
-      </div>
-    </div>
+    </footer>
   );
 }
 
-export default Footer;
+function SocialLink({ href, icon, hoverClass }) {
+  return (
+    <Link to={href} target="_blank" className={`text-2xl ${hoverClass}`}>
+      {icon}
+    </Link>
+  );
+}
+
+function QuickLink({ href, text }) {
+  return (
+    <li>
+      <Link to={href} target="_blank" className="text-gray-400 hover:text-blue-600">
+        {text}
+      </Link>
+    </li>
+  );
+}

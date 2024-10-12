@@ -22,6 +22,7 @@ import im19 from "../pages/components/img/JIT_1691_3_11zon.jpg"
 
 import im21 from "../pages/components/img/449A0272 (2)_1_11zon.jpg"
 import im22 from "../pages/components/img/4Z2A1873_4_11zon.jpg"
+import SectionTitle from './components/SectionTitle';
 
 const ImageGallery = () => {
   const [images, setImages] = useState([
@@ -119,7 +120,11 @@ im22
     ));
 
   return (
+   
     <div className="flex flex-col items-center p-8">
+       <div className="w-full flex justify-center">
+    <SectionTitle title="GALLERY" className="text-center" />
+  </div>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {renderImages(images)}
       </div>

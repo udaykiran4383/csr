@@ -16,8 +16,10 @@ import sing from "../pages/components/img/13-Amandeep Singh Raheja, The Kalgidha
 import suja from "../pages/components/img/14-Sujatha Rajgopalan,Sterling & Wilson.jpeg"
 import Suman  from "../pages/components/img/15-Suman Shrivastava, ISDM.jpeg"
 import Anju from "../pages/components/img/16-Anju Saini, Elegant Success Impression.jpeg"
-import finsa from "../pages/components/img/17-Amanpal Singh Chawla, Fisaarthi Learning Solutions.jpeg"
+import finsa from "../pages/components/img/17-Amanpal Singh Chawla, Fisaarthi Learning Solutions.jpeg";
 import SectionTitle from "./components/SectionTitle";
+
+
 const teamMembers = [
   {
     name: "Sunil Kumar",
@@ -134,8 +136,25 @@ const teamMembers = [
 export default function TeamComponent() {
   return (
     <div className="container mx-auto px-4 py-8">
+                   <div className="relative">
+      {/* Grid lines SVG */}
+      <svg className="absolute inset-0 w-full h-full z-0" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+            <path d="M 50 0 L 0 0 0 50" fill="none" stroke="rgba(255,255,255,0.6)" strokeWidth="0.9" />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#grid)" />
+      </svg>
+   <div className="relative z-10 text-center">
 
-   <h1>Panelists</h1>
+<div className="w-full flex justify-center">
+
+  <SectionTitle title="PANELISTS" className="text-center" />
+</div>
+
+</div>
+ 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {teamMembers.map((member, index) => (
           <div
@@ -164,6 +183,7 @@ export default function TeamComponent() {
           </div>
         ))}
       </div>
+    </div>
     </div>
   );
 }

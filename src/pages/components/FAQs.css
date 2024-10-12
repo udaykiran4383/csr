@@ -14,6 +14,6 @@
     opacity: 1; 
   }
 .faq-item:hover{
-  background: linear-gradient(180deg, rgba(255, 121, 52, 0.35) -1.39%, rgba(255, 255, 255, 0.0735) 95.65%);
+  background: linear-gradient(180deg, rgba(99, 102, 241, 0.8), rgba(255, 255, 255, 0.2)); 
   opacity: 1;
 }
